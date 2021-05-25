@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="static/css/style.css">
+<title>HTMLファイルを読み込む</title>
+</head>
+<body>
+	<h1>AWS_クイズ</h1>
+	<h2>最初から</h2>
+	<form action="/mondai" method="post">
+        <input type="hidden" name="q_id" value="0">
+        <input type="submit" value="開始する">
+    </form>
+
+	<h2>途中から</h2>
+
+	<form action="/mondai" method="post">
+		<input type="number" name="q_id" id="q_id"/>
+        <input type="submit" value="開始する">
+    </form>
+
+	<h2>分野別</h2>
+
+	<form action="/cat" method="post">
+        <input type="submit" value="移動する">
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{post_id + 1}}問目:答え</title>
+    {% if judge %}
+        {% if judge == '正解' %}
+        <h1><font color="#ff4500">{{judge}}</font></h1>
+        {% elif judge == '不正解' %}
+        <h1><font color="#00bfff">{{judge}}</font></h1>
+        {% endif %}
+    {% endif %}
+
+    <h2>{{post_id + 1}}問目の答え:{{answer}}</h2>
+    <h2>あなたの回答:{{post_answer}}</h2>
+
+    <h2>問題文:{{q_question}}</h2>
+    <h3>{{q_question1}}</h3>
+    <h3>{{q_question2}}</h3>
+    <h3>{{q_question3}}</h3>
+    <h3>{{q_question4}}</h3>
+    <h3>{{q_question5}}</h3>
+    <h3>{{q_question6}}</h3>
+    <h2>間違った問題:{{bad_ans}}</h2>
+
+    <form action="/mondai" method="post">
+        <input type="hidden" name="q_id" value="{{t_id + 1}}">
+        <input type="submit" value="次の問題(元に戻る)">
+    </form>
+
+    <br>
+
+    <form action="/mondai_bad" method="post">
+        <input type="submit" value="間違えた問題">
+        <input type="hidden" name="t_id" value="{{t_id}}">
+    </form>
+
+
+
+    <a href="/">終了する</a>
+</head>
+<body>
+
+</body>
+</html>

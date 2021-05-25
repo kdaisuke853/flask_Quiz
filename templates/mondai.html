@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>問題文</title>
+    {% if catg %}
+        {% if catg == '1' %}
+        <form action="/cat/answer" method="post">
+            <input type="hidden" name="q_id" value="{{q_id}}">
+            <input type="hidden" name="t_id" value="{{t_id}}">
+            <h2>{{q_id + 1}}問目:{{q_question}}</h2>
+            <p><input type="radio" name="q" value="A">{{q_question1}}</input></p>
+            <p><input type="radio" name="q" value="B">{{q_question2}}</input></p>
+            <p><input type="radio" name="q" value="C">{{q_question3}}</input></p>
+            <p><input type="radio" name="q" value="D">{{q_question4}}</input></p>
+            <input type="hidden" name="q_answer" value="{{q_answer}}">
+            <input type="submit" value="回答する">
+        </form>
+        {% elif catg == '0' %}
+        <form action="/answer" method="post">
+            <input type="hidden" name="q_id" value="{{q_id}}">
+            <input type="hidden" name="t_id" value="{{t_id}}">
+            <h2>{{q_id + 1}}問目:{{q_question}}</h2>
+            <p><input type="radio" name="q" value="A">{{q_question1}}</input></p>
+            <p><input type="radio" name="q" value="B">{{q_question2}}</input></p>
+            <p><input type="radio" name="q" value="C">{{q_question3}}</input></p>
+            <p><input type="radio" name="q" value="D">{{q_question4}}</input></p>
+            <input type="hidden" name="q_answer" value="{{q_answer}}">
+            <input type="submit" value="回答する">
+        </form>
+        {% endif %}
+    {% endif %}
+
+</head>
+<body>
+
+</body>
+</html>

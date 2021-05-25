@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/> -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+    <div class="tab-area">
+        <div class="tab active">
+          AWS EC2
+        </div>
+        <div class="tab">
+          タブ２
+        </div>
+        <div class="tab">
+          タブ３
+        </div>
+      </div>
+      <div class="content-area">
+        <div class="content show">
+            <h3>{{EC2_count}}問あります</h3>
+            <form action="/cat/EC2" method="post">
+            <input type="submit" value="開始する">
+            </form>
+        </div>
+        <div class="content">
+          タブ２の中身です
+        </div>
+        <div class="content">
+          タブ３の中身です
+        </div>
+      </div>
+</body>
+<script src="static/js/script.js"></script>
+</html>

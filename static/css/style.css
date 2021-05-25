@@ -1,0 +1,35 @@
+.tab-area {
+    display: flex;
+    justify-content: space-around;
+    background-color: #222e3e;
+    cursor: pointer;
+    }
+    .tab {
+      width: 700px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      color: white;
+      border-right: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
+    }
+    .tab.active {
+      background-color: rgb(222, 247, 0);
+      color: #222e3e;
+      border: none;
+    }
+  .content-area {
+    font-size: 30px;
+    text-align: center;
+  }
+    .content {
+      display: none;
+    }
+    .content.show {
+      margin-top: 50px;
+      display: block;
+    }
+  body {
+    background: rgb(58,180,148);
+    background: linear-gradient(90deg, rgba(58,180,148,1) 0%, rgba(36,230,62,1) 50%, rgba(154,207,104,1) 100%);
+  }
