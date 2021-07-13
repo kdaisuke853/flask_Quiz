@@ -4,15 +4,15 @@ import re
 
 # クイズのデータベースに接続(phpmyadmin)
 conn = mydb.connect(
-    host='localhost',
-    user='root',
-    port='3306',
+    host='hostname',
+    user='',
+    port='',
     password='',
-    database='mydb'
+    database=''
 )
 
 cur = conn.cursor()
-cur.execute("SELECT * FROM aws_exam")
+cur.execute("SELECT * FROM exam")
 # 全てのデータを取得
 rows = cur.fetchall()
 
